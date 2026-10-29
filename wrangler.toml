@@ -1,0 +1,8 @@
+name = "pahayag"
+compatibility_date = "2026-10-29"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "pahayag_db"
+database_name = "pahayag-db"
+database_id = "9d6153fc-69f0-4754-8775-20b244636870"
