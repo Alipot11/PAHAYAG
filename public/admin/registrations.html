@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0f172a">
+  <title>Registrations | PAHAYAG Admin</title>
+  <link rel="icon" type="image/x-icon" href="assets/tourism-logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="site-header" class="nav"></header>
+
+  <div class="pagehead">
+    <div class="wrap">
+      <h1>Registrations</h1>
+      <p><a class="btn btn--outline" href="/admin/">&larr; Back to admin</a></p>
+    </div>
+  </div>
+
+  <section class="section section--soft">
+    <div class="wrap">
+      <div id="summary" class="facts"></div>
+
+      <div class="filters">
+        <div class="field">
+          <label for="f-competition">Competition</label>
+          <select id="f-competition">
+            <option value="">All</option>
+            <option value="lantern">Lantern Making</option>
+            <option value="singing">Singing Contest</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-barangay">Barangay</label>
+          <select id="f-barangay"><option value="">All</option></select>
+        </div>
+        <div class="field">
+          <label for="f-year">Year</label>
+          <select id="f-year"></select>
+        </div>
+        <div class="field">
+          <label for="f-search">Search name or number</label>
+          <input id="f-search" type="search" placeholder="Type to search…">
+        </div>
+      </div>
+
+      <p>
+        <span id="showing"></span>
+        <a id="export" class="btn btn--navy" href="#">Download CSV</a>
+      </p>
+
+      <div id="msg" class="msg" hidden></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th><th>Competition</th><th>Name</th><th>Contact</th>
+              <th>Address</th><th>Gender</th><th>Birthdate</th><th>Age*</th>
+              <th>Registered</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="rows"><tr><td colspan="10">Loading…</td></tr></tbody>
+        </table>
+      </div>
+      <p class="lead">*Age as of the event date. Choosing a barangay shows lantern entries only, because the singing form has no barangay field.</p>
+    </div>
+  </section>
+
+  <footer id="site-footer" class="footer"></footer>
+  <script src="/js/layout.js"></script>
+  <script src="/js/registrations.js"></script>
+</body>
+</html>

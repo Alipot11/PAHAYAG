@@ -4,6 +4,7 @@ const NAV_LINKS = [
   { href: "/singing.html", label: "Singing Contest" },
   { href: "/announcements.html", label: "Announcements" },
   { href: "/winners.html", label: "Past Winners" },
+  { href: "/admin/", label: "Staff Login", cta: true },
 ];
 
 // Makes "/lantern", "/lantern.html" and "/lantern/" all look the same
@@ -13,9 +14,11 @@ function normalizePath(path) {
 
 function renderHeader() {
   const here = normalizePath(location.pathname);
-  const links = NAV_LINKS.map(
-    (l) => `<a href="${l.href}"${normalizePath(l.href) === here ? ' aria-current="page"' : ""}>${l.label}</a>`
-  ).join("");
+  const links = NAV_LINKS.map((l) => {
+    const current = normalizePath(l.href) === here ? ' aria-current="page"' : "";
+    const cls = l.cta ? ' class="nav__cta"' : "";
+    return `<a href="${l.href}"${cls}${current}>${l.label}</a>`;
+  }).join("");
 
   document.getElementById("site-header").innerHTML = `
     <a href="/" class="nav__logos">

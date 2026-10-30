@@ -205,3 +205,40 @@ main h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
   .reg-layout { grid-template-columns: 1fr; gap: 28px; }
   .reg-photo { order: -1; min-height: 0; aspect-ratio: 16 / 9; }   /* photo above the form on phones */
 }
+
+.field textarea {
+  width: 100%; padding: 12px 14px; font: inherit; color: var(--text);
+  border: 1px solid #c5d0de; border-radius: 10px; background: #fff; resize: vertical;
+}
+.field textarea:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.btn--outline-dark { border: 1.5px solid var(--navy); color: var(--navy); background: transparent; margin-top: 12px; }
+.btn--outline-dark:hover { background: var(--navy); color: #fff; }
+
+@media (min-width: 721px) {
+  .nav__links .nav__cta[aria-current="page"] {
+    background: #fff; color: var(--navy); border-bottom: 1px solid #fff;
+  }
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;      /* accounts for phone browser toolbars */
+  display: flex;
+  flex-direction: column;
+}
+.footer { margin-top: auto; }   /* pushes the footer down when the page is short */
+
+/* ===== Admin: filters and table ===== */
+.filters {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px; margin: 8px 0 16px;
+}
+.table-wrap { overflow-x: auto; background: #fff; border: 1px solid #dde4ee; border-radius: var(--radius); }
+.table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.table th, .table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e6ecf3; vertical-align: top; }
+.table th {
+  font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); white-space: nowrap; background: var(--bg-soft);
+}
+.table tbody tr:hover { background: #f8fafc; }
+.btn--small { padding: 6px 14px; font-size: .8rem; margin-top: 0; }
