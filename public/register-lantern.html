@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>Register: Parol Making Contest | PAHAYAG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="site-header" class="nav"></header>
+
+  <div class="pagehead">
+    <div class="wrap">
+      <h1>Register: Parol Making Contest</h1>
+      <p>Individual entries only. If you are part of a team, register under one member's name.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+        <div class="reg-layout">
+
+        <div>
+            <form id="reg-form" class="form" data-competition="lantern" novalidate>
+             <div class="field">
+          <label for="full_name">Complete name</label>
+          <input id="full_name" name="full_name" type="text" maxlength="100" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="contact_number">Contact number</label>
+          <input id="contact_number" name="contact_number" type="tel" maxlength="20" required autocomplete="tel">
+        </div>
+                <div class="field">
+          <label for="address">Purok / Sitio / Street</label>
+          <input id="address" name="address" type="text" maxlength="200" required autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="barangay">Barangay</label>
+          <select id="barangay" name="barangay" required>
+            <option value="">Select barangay…</option>
+            <option>Agsao</option>
+            <option>Agutay</option>
+            <option>Ambulong</option>
+            <option>Dulangan</option>
+            <option>Ipil</option>
+            <option>Jao-asan</option>
+            <option>Poblacion</option>
+            <option>Silum</option>
+            <option>Tampayan</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="municipality">Municipality</label>
+          <input id="municipality" type="text" value="Magdiwang, Romblon" readonly>
+          <small>This competition is open to residents of Magdiwang only.</small>
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select…</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="birthdate">Birthdate</label>
+          <input id="birthdate" name="birthdate" type="date" required>
+        </div>
+
+        <!-- Honeypot: hidden from people, bots tend to fill it -->
+        <div class="hp" aria-hidden="true">
+          <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <button type="submit" class="btn btn--navy">Submit registration</button>
+            </form>
+            <div id="msg" class="msg" hidden></div>
+        </div>
+
+        <figure class="reg-photo">
+            <img src="/img/register-lantern.jpg" alt="Giant lantern from last year's PAHAYAG">
+            <figcaption>PAHAYAG [YEAR] Giant Lantern Making</figcaption>
+        </figure>
+
+        </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" class="footer"></footer>
+  <script src="/js/layout.js"></script>
+  <script src="/js/register.js"></script>
+</body>
+</html>

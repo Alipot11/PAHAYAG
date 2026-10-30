@@ -154,3 +154,54 @@ main h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
   .cards { grid-template-columns: 1fr; }
   .section { padding: 48px 0; }
 }
+
+/* ===== Forms ===== */
+.form { max-width: 560px; margin-top: 24px; display: grid; gap: 18px; }
+.form[hidden] { display: none; }
+.field label { display: block; font-weight: 500; margin-bottom: 6px; }
+.field input, .field select {
+  width: 100%; padding: 12px 14px; font: inherit; color: var(--text);
+  border: 1px solid #c5d0de; border-radius: 10px; background: #fff;
+}
+.field input:focus, .field select:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.field small { display: block; color: var(--muted); margin-top: 4px; }
+.field input[readonly] { background: var(--bg-soft); color: var(--muted); cursor: not-allowed; }
+.hp { position: absolute; left: -9999px; height: 0; overflow: hidden; } /* honeypot */
+
+.msg { padding: 14px 18px; border-radius: 10px; max-width: 560px; margin-top: 16px; }
+.msg--error { background: #fdecef; border-left: 4px solid #e11d48; }
+.msg--ok { background: #e8f6ee; border-left: 4px solid #16a34a; }
+.msg .btn { margin-top: 12px; }
+.btn[disabled] { opacity: .6; cursor: wait; }
+
+/* ===== Registration layout: form left, photo right (same height) ===== */
+.reg-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  gap: 48px;
+  align-items: stretch;               /* both columns share the form's height */
+}
+.reg-layout .form { max-width: none; margin-top: 0; }
+.reg-layout .msg { max-width: none; }
+
+.reg-photo {
+  position: relative;
+  min-height: 320px;
+  border-radius: var(--radius); overflow: hidden;
+  background: var(--navy);
+  box-shadow: 0 6px 18px rgba(15,23,42,.18);
+}
+.reg-photo img {
+  position: absolute; inset: 0;       /* fill the box instead of setting its height */
+  width: 100%; height: 100%; object-fit: cover;
+}
+.reg-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 28px 16px 12px; font-size: .78rem; color: #fff;
+  background: linear-gradient(transparent, rgba(15,23,42,.85));
+}
+
+@media (max-width: 860px) {
+  .reg-layout { grid-template-columns: 1fr; gap: 28px; }
+  .reg-photo { order: -1; min-height: 0; aspect-ratio: 16 / 9; }   /* photo above the form on phones */
+}
