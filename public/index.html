@@ -14,7 +14,7 @@
 <body>
   <header id="site-header" class="nav"></header>
 
-  <section class="hero">
+    <section class="hero">
     <div class="hero__text">
       <h1>
         <span class="hero__light">JOIN</span>
@@ -28,26 +28,133 @@
     </div>
   </section>
 
+  <!-- Key facts strip -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact"><b>Event date</b><span>[EVENT DATE]</span></div>
+        <div class="fact"><b>Venue</b><span>[VENUE]</span></div>
+        <div class="fact"><b>Registration until</b><span>[DEADLINE]</span></div>
+        <div class="fact"><b>Competitions</b><span>2 this year</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>About PAHAYAG</h2>
+        <p>[ONE OR TWO SENTENCES ABOUT PAHAYAG AND WHY IT IS HELD EVERY DECEMBER]</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar__icon">&#127878;</div>
+          <h3>Liwanag ng Pasko</h3>
+          <p>The light of Christmas, shown in the giant lanterns that brighten Magdiwang.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">&#127908;</div>
+          <h3>Pasasalamat</h3>
+          <p>Gratitude, shared through music and the talent of our community.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">&#129309;</div>
+          <h3>Pagkakaisa</h3>
+          <p>Unity, as every barangay comes together to celebrate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitions -->
   <section class="section section--soft">
     <div class="wrap">
-      <h2>Competitions</h2>
-      <p class="lead">Choose a competition to see the details and register.</p>
+      <div class="section__head">
+        <h2>Competitions</h2>
+        <p>Choose a competition to see the details and register.</p>
+      </div>
       <div class="cards">
-        <div class="card">
-          <h3>Giant Christmas Lantern Making</h3>
-          <p>Build a giant Christmas lantern and light up the celebration. Individual entries only.</p>
-          <a class="btn btn--outline" href="/lantern.html">View details</a>
+        <div class="card card--photo">
+          <img class="card__img" src="/img/home-lantern.jpg" alt="Giant Christmas lantern" loading="lazy">
+          <div class="card__body">
+            <div class="card__tags"><span>Individual entry</span><span>Magdiwang residents</span></div>
+            <h3>Giant Christmas Lantern Making</h3>
+            <p>Build a giant Christmas lantern and light up the celebration. Teams register under one member's name.</p>
+            <div class="card__actions">
+              <a class="btn btn--gold" href="/register-lantern.html">Register</a>
+              <a class="btn btn--outline" href="/lantern.html">View details</a>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Singing Contest</h3>
-          <p>Solo singers aged 15 and above. Send an audition video to qualify for the elimination round.</p>
-          <a class="btn btn--outline" href="/singing.html">View details</a>
+        <div class="card card--photo">
+          <img class="card__img" src="/img/home-singing.jpg" alt="Singing contest stage" loading="lazy">
+          <div class="card__body">
+            <div class="card__tags"><span>Solo</span><span>Ages 15 and above</span></div>
+            <h3>Singing Contest</h3>
+            <p>Send an audition video to qualify for the elimination round, then sing your way to the Grand Final.</p>
+            <div class="card__actions">
+              <a class="btn btn--gold" href="/register-singing.html">Register</a>
+              <a class="btn btn--outline" href="/singing.html">View details</a>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to join -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>How to join</h2>
+        <p>Three simple steps.</p>
+      </div>
+      <div class="how">
+        <div class="how__step">
+          <h3>Pick a competition</h3>
+          <p>Read the rules and judging criteria on the competition page.</p>
+        </div>
+        <div class="how__step">
+          <h3>Register online</h3>
+          <p>Fill out the registration form before the deadline.</p>
+        </div>
+        <div class="how__step">
+          <h3>Watch for updates</h3>
+          <p>Schedules and passed contestants are posted under Announcements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest announcements -->
+  <section class="section section--soft">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Latest announcements</h2>
+      </div>
+      <div id="latest" class="latest">
+        <p class="latest__empty">Loading…</p>
+      </div>
+      <p class="latest__more"><a class="btn btn--navy" href="/announcements.html">See all announcements</a></p>
+    </div>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="cta">
+    <div class="wrap">
+      <h2>Be part of PAHAYAG 2026</h2>
+      <p>Registration is free and takes only a few minutes.</p>
+      <div class="cta__btns">
+        <a class="btn btn--gold" href="/register-lantern.html">Register for Lantern Making</a>
+        <a class="btn btn--outline" href="/register-singing.html">Register for Singing</a>
       </div>
     </div>
   </section>
 
   <footer id="site-footer" class="footer"></footer>
   <script src="/js/layout.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/home.js"></script>
 </body>
 </html>

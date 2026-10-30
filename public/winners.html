@@ -14,34 +14,65 @@
 <body>
   <header id="site-header" class="nav"></header>
 
-  <div class="pagehead">
+  <div class="pagehead pagehead--gold">
     <div class="wrap">
+      <span class="pagehead__eyebrow">Hall of Champions</span>
       <h1>Past Winners</h1>
       <p>Honoring the champions of every PAHAYAG.</p>
     </div>
   </div>
 
-  <section class="section winners">
+  <section class="section hall">
     <div class="wrap">
 
-      <!-- Add a new block like this at the TOP after each event. Newest year first. -->
-      <h2>2026</h2>
+      <!-- NEWEST YEAR FIRST. After each event, delete the "coming soon" box
+           and paste a year block (template below) in its place. -->
 
-      <h3>Giant Christmas Lantern Making</h3>
-      <table>
-        <tr><th>Placement</th><th>Name</th></tr>
-        <tr><td>1st</td><td>[NAME]</td></tr>
-        <tr><td>2nd</td><td>[NAME]</td></tr>
-        <tr><td>3rd</td><td>[NAME]</td></tr>
-      </table>
+      <article class="year">
+        <h2 class="year__title">2026</h2>
+        <p class="hall__soon">The champions of PAHAYAG 2026 will be honored here after the event.</p>
+      </article>
 
-      <h3>Singing Contest</h3>
-      <table>
-        <tr><th>Placement</th><th>Name</th></tr>
-        <tr><td>1st</td><td>[NAME]</td></tr>
-        <tr><td>2nd</td><td>[NAME]</td></tr>
-        <tr><td>3rd</td><td>[NAME]</td></tr>
-      </table>
+      <!-- ===== YEAR TEMPLATE: copy from here ... =====
+      <article class="year">
+        <h2 class="year__title">2026</h2>
+        <p class="year__sub">Liwanag ng Pasko, pasasalamat, at pagkakaisa</p>
+
+        OPTIONAL group photo (delete this figure if there is none):
+        <figure class="year__photo">
+          <img src="/img/winners-2026.jpg" alt="PAHAYAG 2026 winners" loading="lazy">
+          <figcaption>PAHAYAG 2026 champions</figcaption>
+        </figure>
+
+        <div class="contest">
+          <h3 class="contest__title">Giant Christmas Lantern Making</h3>
+          <ol class="podium">
+            <li class="place place--1">
+              <span class="place__medal">1</span>
+              <span class="place__label">Champion</span>
+              <span class="place__name">NAME</span>
+            </li>
+            <li class="place place--2">
+              <span class="place__medal">2</span>
+              <span class="place__label">2nd Place</span>
+              <span class="place__name">NAME</span>
+            </li>
+            <li class="place place--3">
+              <span class="place__medal">3</span>
+              <span class="place__label">3rd Place</span>
+              <span class="place__name">NAME</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="contest">
+          <h3 class="contest__title">Singing Contest</h3>
+          <ol class="podium">
+            ... same three places ...
+          </ol>
+        </div>
+      </article>
+      ===== ... to here ===== -->
 
     </div>
   </section>
