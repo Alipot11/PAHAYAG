@@ -35,8 +35,35 @@ function renderHeader() {
 }
 
 function renderFooter() {
-  document.getElementById("site-footer").innerHTML =
-    `<div class="wrap">&copy; PAHAYAG. All rights reserved.</div>`;
+  document.getElementById("site-footer").innerHTML = `
+    <div class="wrap footer__grid">
+      <div class="footer__office">
+        <div class="footer__brand">
+          <img src="/assets/tourism-logo.png" alt="">
+          <strong>MAGDIWANG TOURISM OFFICE</strong>
+        </div>
+        <p>Magdiwang Municipal Hall<br>Poblacion Magdiwang Romblon<br>Magdiwang 5511, Philippines</p>
+        <p class="footer__contact"><b>Telephone: 09984555038</b></p>
+        <p class="footer__contact"><b>Office Hours:</b> Mon - Fri, 8:00am - 5:00pm</p>
+      </div>
+      <div class="footer__col">
+        <h4>COMPETITIONS</h4>
+        <a href="/lantern.html">Lantern Making</a>
+        <a href="/singing.html">Singing Contest</a>
+        <a href="/register-lantern.html">Register: Lantern</a>
+        <a href="/register-singing.html">Register: Singing</a>
+      </div>
+      <div class="footer__col">
+        <h4>PAHAYAG</h4>
+        <a href="/announcements.html">Announcements</a>
+        <a href="/winners.html">Past Winners</a>
+        <a href="/admin/">Staff Login</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>&copy; ${new Date().getFullYear()} MAGDIWANG TOURISM OFFICE. ALL RIGHTS RESERVED.</span>
+      <span class="footer__social"><a href="https://www.facebook.com/profile.php?id=61583923357666">Facebook</a></span>
+    </div>`;
 }
 
 renderHeader();
